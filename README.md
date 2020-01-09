@@ -1,27 +1,24 @@
-<br />
-<br />
+# Karma the NEAR dapps
 
-<p>
-<img src="https://nearprotocol.com/wp-content/themes/near-19/assets/img/logo.svg?t=1553011311" width="240">
-</p>
+## Requirements
 
-<br />
-<br />
+### IMPORTANT: Make sure you have the latest version of NEAR Shell and Node Version > 10.x  
 
-## Template for NEAR dapps
-### Requirements
-##### IMPORTANT: Make sure you have the latest version of NEAR Shell and Node Version > 10.x 
 1. node and npm
-2. near shell
-install with 
-```
+2. near shell install
+
+```shell
 npm i -g near-shell
 ```
+
 3.(optional) install yarn to build
-```
+
+```shell
 npm i -g yarn
 ```
+
 ### To run on testnet
+
 Step 1: Create account for the contract and deploy the contract.
 In the terminal
 ```

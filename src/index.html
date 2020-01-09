@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <style>
     .App-header {
       background-image: url('https://nearprotocol.com/wp-content/uploads/2019/03/illo-developers.svg');
@@ -14,14 +16,16 @@
       font-size: 1rem;
       color: #25282A;
       text-align: center;
-      padding:2%; 
+      padding: 2%;
     }
+
     .image-wrapper {
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
     }
+
     .App-logo {
       animation: App-logo-spin infinite 20s linear;
       pointer-events: none;
@@ -35,6 +39,7 @@
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
@@ -51,7 +56,7 @@
       cursor: pointer;
       color: white;
       background: #0072CE;
-    } 
+    }
 
     .speech {
       font-size: 1.5rem;
@@ -60,25 +65,71 @@
     }
   </style>
 </head>
+
 <body class="App-header">
   <div>
-      <div class="image-wrapper">
-        <img style="width:33%;" src="assets/gray_near_logo.svg" alt="NEAR logo" />
-        <p><span role="img" aria-label="fish">🐟</span> NEAR protocol is a new blockchain focused on developer productivity and useability!<span role="img" aria-label="fish">🐟</span></p>
-        <p><span role="img" aria-label="chain">⛓</span> This little react app is connected to blockchain right now. <span role="img" aria-label="chain">⛓</span></p>
-        <img src="assets/near.svg" class="App-logo margin-logo" alt="logo" />
-        <p id="speech" class="speech"></p>
-      </div>
-      <div id="signed-out-flow" class="d-none">
-        <button id="sign-in-button" >Sign-in with NEAR</button>
-      </div>
-      <div id="signed-in-flow" class="d-none">
-          <button id="sign-out-button" >Sign-out</button>
-      </div> 
+    <div id="signed-out-flow" class="d-none">
+      <button id="sign-in-button">Sign-in with NEAR</button>
+    </div>
+    <div>
+      <h1 id="karma">Karma</h1>
+
+      <h2 id="problemstatement">Problem Statement</h2>
+
+      <p>The biggest value add for car driving assisting system is the smooth lane keeping.</p>
+
+      <h3 id="reward">Reward</h3>
+
+      <p>Good driving is rarely rewarded other than safety itself.
+        Karma aims to provide quality training dataset for auto makers and monetary incentives for the drivers. </p>
+
+      <h3 id="drivingrecordownership">Driving Record Ownership</h3>
+
+      <p>Auto company takes ownership of your driving records, trains a driving assisting system, and sells that system
+        back to you.</p>
+
+      <p>A more rational solution is auto company pays for good work on driving, hence ending the dataset deprivation
+        and encouraging safe driving.</p>
+
+      <h2 id="priorworks">Prior Works</h2>
+
+      <h3 id="chffr">Chffr</h3>
+
+      <p>Chffr (now discontinued) is a dashcam app for your car. You can use this app to record your drives with panda,
+        earn comma points and help teach self driving cars how to drive.
+        <a href="https://community.comma.ai/wiki/index.php/Chffr">https://community.comma.ai/wiki/index.php/Chffr</a>
+      </p>
+
+      <h2 id="solutionproposal">Solution Proposal</h2>
+
+      <p>A mobile application that rewards the driver for smooth driving with NEAR protocol.</p>
+
+      <h3 id="usecase">Use Case</h3>
+
+      <p>Yifei opens the Karma application on his Android Phone.
+        He navigates himself home.
+        Karma starts to record his driving and communicate to his car through the comma two devkit.
+        He can see an incremental counter on his Karma points and tries to keep it as high as possible by driving as
+        smooth as possible.
+        When he finished his trip home, Karma accredits his account bases off his driving quality.
+        Yifei may choose to cash out those Karma points, trade for coupon or promos, or set them on bidding to trade
+        with other Karma drivers.</p>
+
+      <p>We propose a Mobile App solution which records and uploads good driving records.</p>
+      <p>When there is a Dart package available, we will give it a shot.</p>
+    </div>
+    <div id="signed-in-flow" class="d-none">
+      <button id="sign-out-button">Sign-out</button>
+    </div>
+  </div>
+  <div class="after-sign-in sign-out" style="display: none;">
+    <button class="btn btn-primary">Sign Out</button>
+  </div>
   </div>
   <script src="https://cdn.jsdelivr.net/gh/nearprotocol/nearlib@0.19.1/dist/nearlib.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script src="./config.js"></script>
   <script src="./main.js"></script>
 </body>
+
 </html>
