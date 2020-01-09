@@ -11,6 +11,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { CartComponent } from './cart/cart.component';
       { path: '', component: ProductListComponent },
        { path: 'products/:productId', component: ProductDetailsComponent },
         { path: 'cart', component: CartComponent },
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
