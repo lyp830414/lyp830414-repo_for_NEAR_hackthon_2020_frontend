@@ -1,6 +1,6 @@
 export const products = [
   {
-    name: 'Zijing Zhang : 799ETH',
+    name: 'Mengxiang Lin : 799ETH',
     balance: 799,
     description: 'Display user balance'
   },
