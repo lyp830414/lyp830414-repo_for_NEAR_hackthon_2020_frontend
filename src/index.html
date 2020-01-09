@@ -1,27 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Angular Getting Started</title>
-    <base href="/" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
-  <body>
-    <app-root></app-root>
-  </body>
+<body style="background: #fff">
+  <div class="container">
+    <h1>Karma</h1>
+
+    <div class="sign-in" style="display: none;">
+      <p>You'll need to sign in to call contract methods:</p>
+      <button class="btn btn-primary">Sign In</button>
+    </div>
+
+    <div class="after-sign-in" style="display: none;">
+      <!-- <p>Here is how you use can use it from JavaScript.</p>
+      <p>process: init -> increasePoint -> exchange</p>
+  
+      <p>To init:</p>
+      <pre>
+        contract.init()
+      </pre>
+
+      <p>To check the vault's balance:</p>
+      <pre>
+        contract.balanceOf({tokenOwner: "vault"})
+      </pre>
+
+      <p>To check your balance:</p>
+      <pre>
+        contract.balanceOf({tokenOwner: walletAccount.getAccountId()})
+      </pre>
+
+      <p>To increase your point by 1000:</p>
+      <pre>
+        contract.increasePoint({owner: walletAccount.getAccountId(), value: '1000'})
+      </pre>
+
+      <p>To check your point:</p>
+      <pre>
+        contract.getPoint({owner: walletAccount.getAccountId()})
+      </pre>
+
+      <p>To exchange 100 point for 1 token:</p>
+      <pre>
+        contract.exchange({value: '100'})
+      </pre>
+      
+      <p>To send money:</p>
+      <pre>
+        contract.transfer({to: 'bob.near', tokens: '1000'})
+      </pre> -->
+      <h2>Balance</h2>
+      <p>The Amount of Karma Points</p>
+      <h2>Reward</h2>
+      <p>Cash</p>
+      <h2>Record</h2>
+      <p>Your Driving Assets</p>
+    </div>
+    <div class="after-sign-in sign-out" style="display: none;">
+      <button class="btn btn-primary">Sign Out</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/nearlib@0.19.1/dist/nearlib.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="./config.js"></script>
+  <script src="./main.js"></script>
+  <script >
+
+  </script>
+</body>
 </html>
-
-
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
--->
