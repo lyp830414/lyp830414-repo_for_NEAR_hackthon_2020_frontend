@@ -1,2 +1,5 @@
 //@nearfile
-// TODO: Define data model here
+
+export class TextMessage {
+    text: string;
+}

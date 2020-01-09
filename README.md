@@ -1,21 +1,45 @@
-# Token Contract in AssemblyScript
+<br />
+<br />
 
-## Description
+<p>
+<img src="https://nearprotocol.com/wp-content/themes/near-19/assets/img/logo.svg?t=1553011311" width="240">
+</p>
 
-This project contains implementation of token contract similar to [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard). The contract allows you to launch a new token on top of the NEAR blockchain which users can interact with as if it were any other token -- checking balances, transferring, etc.
+<br />
+<br />
 
-This is a back-end contract only so there is no front-end included.
+## Template for NEAR dapps
+### Requirements
+##### IMPORTANT: Make sure you have the latest version of NEAR Shell and Node Version > 10.x 
+1. node and npm
+2. near shell
+install with 
+```
+npm i -g near-shell
+```
+3.(optional) install yarn to build
+```
+npm i -g yarn
+```
+### To run on testnet
+Step 1: Create account for the contract and deploy the contract.
+In the terminal
+```
+near login
+```
+click the link and create your own contract ID
 
+Step 2:
+modify src/config.js line that sets the contractName. Set it to id from step 1.
+```
+const CONTRACT_NAME = "contractId"; /* TODO: fill this in! */
+```
 
-## To Run
-
-*In NEAR Studio (https://studio.nearprotocol.com)*
-
-1. Click the "Run" button on the top of the Studio window
-
-2. You will be redirected to the output for the JavaScript tests described in `src/main.js` to show that the contract is performing properly.  This is a fully back-end contract so there is no front end.
-
-
-## To Explore
-
-See `assembly/main.ts` for the contract code and `src/main.js` for the JavaScript tests which define its usage.
+Step 3:
+Finally, run the command in your terminal.
+```
+npm install
+npm run(yarn) prestart
+npm run(yarn) start
+```
+The server that starts is for static assets and by default serves them to localhost:5000. Navigate there in your browser to see the app running!
